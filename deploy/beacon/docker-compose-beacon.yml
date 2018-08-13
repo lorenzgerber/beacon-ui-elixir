@@ -1,23 +1,11 @@
 version: "2"
 services:
-  beacon_ui:
-    build:
-        context: ../..
-        args:
-          UI_BUILD_ENV: docker
-          UI_BUILD_APP: beacon
-    # Frontend will be reachable at http://127.0.0.1:6080/
-    ports:
-      - "6080:80"
-    depends_on:
-      - beacon
-      - beacon_db
   beacon:
     build:
       context: beacon_backend/
     # Backend will be reachable at http://127.0.0.1:9075/
     ports:
-      - "9075:9075"
+      - "80:9075"
     links:
       - beacon_db:beacon_db
     depends_on:
