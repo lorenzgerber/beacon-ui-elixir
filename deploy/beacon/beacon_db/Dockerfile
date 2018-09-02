@@ -16,9 +16,6 @@ COPY load_data.sh /docker-entrypoint-initdb.d/001-load_data.sh
 
 WORKDIR /tmp
 COPY elixir_beacon_db_schema.sql /tmp/
-COPY WHH4997.SNPs /tmp/
-COPY WHH4998.SNPs /tmp/
-COPY WHH4999.SNPs /tmp/
-COPY WHH5000.SNPs /tmp/
+COPY global.SNPs /tmp/
 
 
