@@ -1,5 +1,12 @@
 #/bin/bash
 set -e
+
+echo "extracting data"
+unzip global.zip
+
+
+
+
 echo "Creating beacon sampleset SG10K"
 PGPASSWORD=r783qjkldDsiu \
     psql -U microaccounts_dev elixir_beacon_dev <<-EOSQL
