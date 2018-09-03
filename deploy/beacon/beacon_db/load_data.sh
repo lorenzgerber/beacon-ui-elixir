@@ -17,8 +17,8 @@ do
             INSERT INTO beacon_dataset
             (id, description, access_type, reference_genome, size)
             VALUES
-            ('$FILE_NAME', 'dataset_description', 'PUBLIC', 'grch38', $FILE_LENGTH);    
-    EOSQL
+            ('$FILE_NAME', 'dataset_description', 'PUBLIC', 'grch38', $FILE_LENGTH);
+EOSQL
 
     echo "created beacon schema..."
 
