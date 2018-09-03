@@ -9,7 +9,7 @@ do
     echo "Processing $FILE file..."
     FILE_LENGTH=$(wc -l $FILE |  cut -f1 -d' ')
     echo $FILE_LENGTH
-    FILE_NAME="${f%.*}"
+    FILE_NAME="${FILE%.*}"
     echo $FILE_NAME
 
     PGPASSWORD=r783qjkldDsiu \
