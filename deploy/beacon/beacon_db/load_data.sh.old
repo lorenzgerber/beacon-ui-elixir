@@ -2,9 +2,9 @@
 set -e
 
 echo "extracting data"
-tar xvf sg10k.tar.gz
+tar xvf global.tar.gz
 
-for FILE in *.SNPs
+for FILE in W*.SNPs
 do
     echo "Processing $FILE file..."
     FILE_LENGTH=$(wc -l $FILE |  cut -f1 -d' ')
